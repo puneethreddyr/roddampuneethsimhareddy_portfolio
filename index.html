@@ -5,159 +5,185 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Puneeth | Machine Learning Enthusiast Portfolio</title>
   <meta name="description" content="Portfolio of Roddam Puneeth Simha Reddy, a second-year B.Tech CSE (AI/ML) student and machine learning enthusiast.">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
 
   <!-- Navigation -->
-  <header class="nav" id="top">
-    <a class="logo" href="#top" aria-label="Puneeth, back to top">Puneeth</a>
+  <header class="nav">
+    <a class="logo" href="#home" aria-label="Puneeth, back to top">Puneeth</a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#top">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a class="pill pill-light" href="#contact">Get in touch <span class="pill-arrow" aria-hidden="true">&rarr;</span></a>
   </header>
 
+  <!-- Social icons (fixed on the left, like the template) -->
+  <ul class="socials" aria-label="Social links">
+    <li><a href="https://www.linkedin.com/in/roddampuneethsimhareddy" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.83v1.54h.06c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.78 2.66 4.78 6.11V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-4V9.75Z"/></svg></a></li>
+    <li><a href="https://github.com/puneethreddyr" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a></li>
+    <li><a href="mailto:punithsimha66@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+  </ul>
+
   <main>
-    <!-- Hero: pinned while the headline changes in three steps -->
-    <section class="hero" id="hero" aria-label="Introduction">
-      <div class="hero-card">
-        <div class="web-bg" aria-hidden="true"></div>
-
-        <div class="hero-visual">
-          <div class="glow" aria-hidden="true"></div>
-          <!-- 3D ring: three panels arranged in a circle, rotated with CSS 3D transforms -->
-          <div class="stage" id="stage" aria-label="Rotating 3D gallery of three Spider-Man images">
-            <div class="ring" id="ring">
-              <figure class="panel" style="--i:0"><img src="assets/hero-1.jpg" alt="Spider-Man leaping above rooftop fighters"></figure>
-              <figure class="panel" style="--i:1"><img src="assets/hero-2.jpg" alt="Spider-Man swinging between city towers"></figure>
-              <figure class="panel" style="--i:2"><img src="assets/hero-3.jpg" alt="Spider-Man mid-air above a city skyline"></figure>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-text">
-          <div class="steps">
-            <div class="step is-first">
-              <p class="kicker">Hey, I'm Puneeth</p>
-              <h1>Machine Learning Enthusiast</h1>
-            </div>
-            <div class="step">
-              <p class="kicker">Predictive modelling</p>
-              <h2>I build things that predict.</h2>
-            </div>
-            <div class="step">
-              <p class="kicker">Web design</p>
-              <h2>And I design for the web.</h2>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-tagline">
-          <p class="tag-title">Clean code, clear ideas.</p>
-          <p class="tag-sub">From data to design, I build projects that solve real problems.</p>
-        </aside>
-
-        <ul class="hero-tags">
-          <li><span>#01</span>Machine Learning</li>
-          <li><span>#02</span>Predictive Modelling</li>
-          <li><span>#03</span>Web Design</li>
-          <li><span>#04</span>Python</li>
-        </ul>
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero-photo reveal">
+        <div class="glow" aria-hidden="true"></div>
+        <img src="assets/puneeth.jpg" alt="Portrait of Puneeth">
       </div>
-    </section>
-
-    <!-- Tools marquee -->
-    <section class="tools" aria-label="Tools I work with">
-      <p class="tools-title">Tools I work with</p>
-      <div class="marquee">
-        <ul class="marquee-track">
-          <li>Python</li><li>C</li><li>Java</li><li>NumPy</li><li>Jupyter</li><li>MATLAB</li><li>VS Code</li><li>GitHub</li><li>PowerShell</li>
-          <li aria-hidden="true">Python</li><li aria-hidden="true">C</li><li aria-hidden="true">Java</li><li aria-hidden="true">NumPy</li><li aria-hidden="true">Jupyter</li><li aria-hidden="true">MATLAB</li><li aria-hidden="true">VS Code</li><li aria-hidden="true">GitHub</li><li aria-hidden="true">PowerShell</li>
-        </ul>
+      <div class="hero-text">
+        <p class="hello">Hello, I'm</p>
+        <h1 class="name">Roddam Puneeth<br>Simha Reddy</h1>
+        <p class="role-label">Creative</p>
+        <p class="role" id="role" aria-live="polite"><span id="roleText">Machine Learning Enthusiast</span><span class="caret" aria-hidden="true"></span></p>
       </div>
+      <a class="btn btn-resume hero-resume" href="assets/Puneeth_Resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">&darr;</span></a>
     </section>
 
     <!-- About -->
-    <section class="about section" id="about">
-      <div class="about-left">
-        <p class="accent-text">Behind the Code</p>
-        <h2 class="big">Learning, Building, Improving</h2>
+    <section class="section about" id="about">
+      <div class="about-photo reveal">
+        <div class="glow glow-sm" aria-hidden="true"></div>
+        <img src="assets/puneeth.jpg" alt="Puneeth smiling at a desk" loading="lazy">
       </div>
-      <div class="about-right">
-        <p class="lead">I'm a second-year B.Tech CSE (AI/ML) student at Jain (Deemed-to-be University), Faculty of Engineering, and a machine learning enthusiast. I enjoy predictive modelling, Python and web design.</p>
-        <figure class="photo-card">
-          <img src="assets/puneeth.jpg" alt="Portrait of Puneeth" loading="lazy">
-        </figure>
-        <a class="pill pill-red" href="#contact">Get in touch <span class="pill-arrow" aria-hidden="true">&rarr;</span></a>
+      <div class="about-text reveal">
+        <h2 class="title"><span class="accent">Learning,</span><br>Building, Improving</h2>
+        <p>I'm a second-year B.Tech CSE (AI/ML) student at Jain (Deemed-to-be University), Faculty of Engineering, and a machine learning enthusiast. I enjoy predictive modelling, Python and web design.</p>
+        <a class="btn btn-resume" href="assets/Puneeth_Resume.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">&darr;</span></a>
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects carousel -->
     <section class="section" id="projects">
-      <h2 class="big">Projects</h2>
-      <div class="cards">
-        <article class="card card-wide">
+      <div class="section-head reveal">
+        <h2 class="title center"><span class="accent">My</span> Projects</h2>
+        <div class="arrows">
+          <button class="arrow" id="prev" aria-label="Previous project">&larr;</button>
+          <button class="arrow" id="next" aria-label="Next project">&rarr;</button>
+        </div>
+      </div>
+      <div class="carousel" id="carousel" tabindex="0" aria-label="Projects, scroll sideways">
+        <article class="card">
+          <header><span class="num">01</span><span class="chip-tag">AI/ML</span></header>
           <h3>SAPSN</h3>
-          <p class="card-sub">Smart AI-Based Predictive Acid Rain Prevention and Neutralization Network</p>
-          <p>Predictive modelling on time-series sensor and weather data to forecast acid rain. Designed to explain the likely cause, suggest prevention measures and warn the public in advance through SMS alerts.</p>
-          <p class="stack">Python &middot; Jupyter Notebook &middot; NumPy</p>
-          <a class="pill pill-light" href="https://github.com/puneethreddyr" target="_blank" rel="noopener">View on GitHub <span class="pill-arrow" aria-hidden="true">&rarr;</span></a>
+          <p class="sub">Smart AI-Based Predictive Acid Rain Prevention and Neutralization Network</p>
+          <p class="uses-title">Technologies used</p>
+          <p class="uses">Python, Jupyter Notebook &amp; NumPy</p>
+          <div class="preview" aria-hidden="true">
+            <svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 90 L45 60 L75 72 L110 35 L145 50 L180 20 L210 30"/><circle cx="110" cy="35" r="5" fill="currentColor"/><circle cx="180" cy="20" r="5" fill="currentColor"/></svg>
+          </div>
+          <p class="desc">Predictive modelling on time-series sensor and weather data to forecast acid rain. Explains the likely cause, suggests prevention measures and warns the public in advance through SMS alerts.</p>
+          <a class="go" href="https://github.com/puneethreddyr" target="_blank" rel="noopener" aria-label="SAPSN on GitHub">&nearr;</a>
         </article>
         <article class="card">
+          <header><span class="num">02</span><span class="chip-tag">Web</span></header>
           <h3>Library Management System</h3>
-          <p class="card-sub">Team Lead</p>
-          <p>Led the project and designed the web interface.</p>
-          <a class="pill pill-light" href="https://github.com/puneethreddyr" target="_blank" rel="noopener">View on GitHub <span class="pill-arrow" aria-hidden="true">&rarr;</span></a>
+          <p class="sub">Team Lead</p>
+          <p class="uses-title">My role</p>
+          <p class="uses">Project lead &amp; web interface design</p>
+          <div class="preview" aria-hidden="true">
+            <svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="40" y="25" width="30" height="60" rx="3"/><rect x="80" y="15" width="30" height="70" rx="3"/><rect x="120" y="30" width="30" height="55" rx="3"/><path d="M160 85 L180 25 L200 32 L182 90 Z"/><path d="M25 90 H205"/></svg>
+          </div>
+          <p class="desc">Led the project as main lead, coordinating the team and its tasks, and designed the web interface of the system.</p>
+          <a class="go" href="https://github.com/puneethreddyr" target="_blank" rel="noopener" aria-label="Library Management System on GitHub">&nearr;</a>
         </article>
         <article class="card">
+          <header><span class="num">03</span><span class="chip-tag">Web</span></header>
           <h3>Web Design</h3>
-          <p class="card-sub">Pages and layouts</p>
-          <p>Designed and built web pages with a clean, user-friendly layout.</p>
-          <a class="pill pill-light" href="https://github.com/puneethreddyr" target="_blank" rel="noopener">View on GitHub <span class="pill-arrow" aria-hidden="true">&rarr;</span></a>
+          <p class="sub">Pages and layouts</p>
+          <p class="uses-title">Focus</p>
+          <p class="uses">Clean, user-friendly layouts</p>
+          <div class="preview" aria-hidden="true">
+            <svg viewBox="0 0 220 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="25" y="12" width="170" height="86" rx="8"/><path d="M25 32 H195"/><rect x="40" y="46" width="60" height="38" rx="4"/><path d="M115 50 H178 M115 64 H165 M115 78 H172"/></svg>
+          </div>
+          <p class="desc">Designed and built web pages with a focus on a clean, user-friendly layout.</p>
+          <a class="go" href="https://github.com/puneethreddyr" target="_blank" rel="noopener" aria-label="Web Design projects on GitHub">&nearr;</a>
         </article>
       </div>
     </section>
 
-    <!-- Certifications -->
-    <section class="section" id="certifications">
-      <h2 class="big">Certifications</h2>
-      <p class="muted">All courses completed on LinkedIn Learning.</p>
-      <ul class="certs">
-        <li><span>Learning Graph Neural Networks</span><time>Sep 2026</time></li>
-        <li><span>Python in Excel: Getting Started with Data Analysis</span><time>Sep 2026</time></li>
-        <li><span>Python for Data Science and Machine Learning Essential Training Part 1</span><time>Sep 2026</time></li>
-        <li><span>Python Essential Training</span><time>Sep 2026</time></li>
-        <li><span>Programming Foundations: Discrete Mathematics</span><time>Aug 2026</time></li>
-        <li><span>Java Object-Oriented Programming</span><time>Mar 2026</time></li>
-      </ul>
+    <!-- Journey: education and certifications -->
+    <section class="section" id="journey">
+      <h2 class="title center reveal"><span class="accent">My</span> Journey</h2>
+      <div class="tabs reveal" role="tablist" aria-label="Journey">
+        <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-edu" id="tab-edu">Education</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-cert" id="tab-cert">Certifications</button>
+      </div>
+
+      <div class="timeline" id="panel-edu" role="tabpanel" aria-labelledby="tab-edu">
+        <div class="t-row">
+          <div class="t-main"><h3>B.Tech (CSE, AI/ML)</h3><p class="purple">Jain (Deemed-to-be University), Faculty of Engineering</p></div>
+          <div class="t-date">2nd Year<br>Ongoing</div>
+          <p class="t-desc">Studying Computer Science &amp; Engineering with a specialization in AI/ML. CGPA: 7.03.</p>
+        </div>
+        <div class="t-row">
+          <div class="t-main"><h3>Intermediate (Class XII)</h3><p class="purple">Andhra Pradesh State Board</p></div>
+          <div class="t-date">942/1000</div>
+          <p class="t-desc">Completed Class XII with 94.2%.</p>
+        </div>
+        <div class="t-row">
+          <div class="t-main"><h3>Class X</h3><p class="purple">Andhra Pradesh State Board</p></div>
+          <div class="t-date">488/600</div>
+          <p class="t-desc">Completed Class X with 81.33%.</p>
+        </div>
+      </div>
+
+      <div class="timeline" id="panel-cert" role="tabpanel" aria-labelledby="tab-cert" hidden>
+        <div class="t-row"><div class="t-main"><h3>Learning Graph Neural Networks</h3><p class="purple">LinkedIn Learning</p></div><div class="t-date">Sep 2026</div><p class="t-desc">Neural networks, graph networks and AI.</p></div>
+        <div class="t-row"><div class="t-main"><h3>Python in Excel: Getting Started with Data Analysis</h3><p class="purple">LinkedIn Learning</p></div><div class="t-date">Sep 2026</div><p class="t-desc">Data analysis with Python and Microsoft Excel.</p></div>
+        <div class="t-row"><div class="t-main"><h3>Python for Data Science and Machine Learning Essential Training Part 1</h3><p class="purple">LinkedIn Learning</p></div><div class="t-date">Sep 2026</div><p class="t-desc">Machine learning, Python and AI.</p></div>
+        <div class="t-row"><div class="t-main"><h3>Python Essential Training</h3><p class="purple">LinkedIn Learning</p></div><div class="t-date">Sep 2026</div><p class="t-desc">Python programming language.</p></div>
+        <div class="t-row"><div class="t-main"><h3>Programming Foundations: Discrete Mathematics</h3><p class="purple">LinkedIn Learning</p></div><div class="t-date">Aug 2026</div><p class="t-desc">Discrete mathematics and programming foundations.</p></div>
+        <div class="t-row"><div class="t-main"><h3>Java Object-Oriented Programming</h3><p class="purple">LinkedIn Learning</p></div><div class="t-date">Mar 2026</div><p class="t-desc">Java and object-oriented programming.</p></div>
+      </div>
+    </section>
+
+    <!-- What I work with: expandable cards -->
+    <section class="section" id="offer">
+      <h2 class="title center reveal"><span class="accent">What I</span> Work With</h2>
+      <div class="offer reveal">
+        <article class="o-card is-open">
+          <h3>Skills</h3>
+          <p>Programming and machine learning foundations I'm building on.</p>
+          <ul class="chips"><li>Python</li><li>C</li><li>Java</li><li>Machine learning</li><li>Data analysis</li><li>Predictive modelling</li><li>Time-series analysis</li><li>Web design</li></ul>
+          <button class="toggle" aria-expanded="true" aria-label="Show or hide skills">&#8963;</button>
+        </article>
+        <article class="o-card">
+          <h3>Tools</h3>
+          <p>Tools I use to write, test and share my work.</p>
+          <ul class="chips"><li>NumPy</li><li>Jupyter Notebook</li><li>MATLAB</li><li>VS Code</li><li>GitHub</li><li>PowerShell</li></ul>
+          <button class="toggle" aria-expanded="false" aria-label="Show or hide tools">&#8963;</button>
+        </article>
+      </div>
     </section>
 
     <!-- Contact -->
     <section class="section contact" id="contact">
-      <h2 class="big">Let's build something meaningful together</h2>
-      <a class="pill pill-red" href="mailto:punithsimha66@gmail.com">Get in touch <span class="pill-arrow" aria-hidden="true">&rarr;</span></a>
-      <ul class="contact-links">
-        <li><a href="mailto:punithsimha66@gmail.com">punithsimha66@gmail.com</a></li>
-        <li><a href="https://github.com/puneethreddyr" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/roddampuneethsimhareddy" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+      <h2 class="title center reveal"><span class="accent">Contact</span> Me</h2>
+      <p class="center muted reveal">Tell me about your next project.</p>
+      <form class="form reveal" id="form">
+        <label>Your name<input type="text" id="fName" required autocomplete="name"></label>
+        <label>Your email<input type="email" id="fEmail" required autocomplete="email"></label>
+        <label>Message<textarea id="fMsg" rows="5" required></textarea></label>
+        <button class="btn btn-fill" type="submit">Send message</button>
+        <p class="fine">This opens your email app with the message ready to send.</p>
+      </form>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2026 Roddam Puneeth Simha Reddy</p>
-    <p class="credit">Spider-Man images are Marvel / Sony artwork, shown in a personal fan gallery. Not affiliated with or endorsed by Marvel.</p>
-  </footer>
+  <footer class="footer"><p>&copy; 2026 Roddam Puneeth Simha Reddy</p></footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="main.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
