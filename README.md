@@ -10,13 +10,12 @@ A personal portfolio site built with plain HTML, CSS and JavaScript (GSAP Scroll
 The hero shows a 3D ring made from `assets/hero-1.jpg`, `hero-2.jpg` and `hero-3.jpg`. Swap in your own images (same file names) at any time. Use images you have the right to use.
 
 ## Publish with GitHub Pages
-1. Push the project to the `main` branch.
-2. On GitHub, open **Settings > Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, select **main** and the **/ (root)** folder, then save.
-4. After a minute your site appears at `https://<your-username>.github.io/<repo-name>/` (for this repo: `https://puneethreddyr.github.io/puneeth_portfolio/`).
+Push to the `main` branch to trigger the GitHub Actions deployment. The workflow publishes the site at `https://puneethreddyr.github.io/puneeth_portfolio/`.
+
+If GitHub Pages is not enabled for the repository yet, the workflow configures it to deploy from GitHub Actions.
 
 ## Structure
 - `index.html` page content
-- `css/style.css` styles
-- `js/main.js` hero scroll animation
+- `style.css` styles
+- `main.js` hero and 3D ring animations
 - `assets/` images
